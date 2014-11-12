@@ -160,6 +160,7 @@
                             } else {
                                 $.get(o.attr('rel'), { screwrand : Math.round(Math.random()*1000) }, function(data) {
                                     o.replaceWith(data);
+                                    obj.trigger('screw:loaded');
                                 }, data_type);
                             }
                         } else if(o.attr('rev')){
